@@ -1,9 +1,7 @@
 # launch log guest agent collection
 python3 /var/lib/waagent/WALinuxAgent-2.9.1.1/bin/WALinuxAgent-2.9.1.1-py3.8.egg --collect-logs -full
-sudo mkdir /msdata
-sudo wget https://aka.ms/downloadazcopy-v10-linux -O /msdata/downloadazcopy-v10-linux
-cd /msdata/
-sudo tar -xvf downloadazcopy-v10-linux
+wget https://aka.ms/downloadazcopy-v10-linux
+tar -xvf downloadazcopy-v10-linux
 # Move AzCopy
 sudo cp ./azcopy_linux_amd64_*/azcopy azcopy
 #sudo chmod 755 /usr/bin/azcopy
